@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Malls in Pasig - Pasig Tourism</title>
+     <link rel="stylesheet" href="style.css">
+     <style>
+         
+         .page-title {
+             text-align: center;
+             padding: 2rem 1rem;
+             background-color: #ecf0f1;
+         }
+         .page-title h1 {
+             color: #0b3d91;
+             font-size: 2.5rem;
+         }
+         .malls-container {
+             max-width: 1200px;
+             margin: 2rem auto;
+             padding: 0 1rem;
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+             gap: 2rem;
+         }
+         .mall-card {
+             border: 1px solid #ddd;
+             border-radius: 8px;
+             overflow: hidden;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+         }
+         .mall-card img {
+             width: 100%;
+             height: 200px;
+             object-fit: cover;
+         }
+         .mall-card h2 {
+             padding: 1rem;
+             color: #0b3d91;
+             font-size: 1.5rem;
+         }
+         .mall-card p {
+             padding: 0 1rem 1.5rem;
+             color: #666;
+             line-height: 1.6;
+         }
+         .comment-section {
+             max-width: 800px;
+             margin: 3rem auto;
+             padding: 0 1rem;
+         }
+         .comment-section h2 {
+             color: #0b3d91;
+             margin-bottom: 1rem;
+         }
+         .comment-form textarea {
+             width: 100%;
+             padding: 1rem;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+             min-height: 120px;
+             margin-bottom: 1rem;
+             resize: vertical;
+         }
+         .comment-form button {
+             background-color: #3498db;
+             color: white;
+             border: none;
+             padding: 0.75rem 1.5rem;
+             border-radius: 4px;
+             cursor: pointer;
+             font-size: 1rem;
+         }
+         .comment-form button:hover {
+             background-color: #2980b9;
+         }
+         
+     </style>
+ </head>
+ <body>
+     <!-- NAVIGATION BAR -->
+<div class="navbar">
+    <div>
+        <img src="Pasig.png">
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="parks.html">Parks</a></li>
+        <li><a href="malls.html">Malls</a></li>
+        <li><a href="landmarks.html">Landmarks</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</div>
+
+     <!-- Page Title -->
+     <section class="page-title">
+         <h1>Malls in Pasig</h1>
+     </section>
+     <!-- Malls Content -->
+     <section class="malls-container">
+         <!-- Estancia Mall -->
+         <div class="mall-card">
+             <img src="Estancia.jpg" alt="Estancia Mall">
+             <h2>Estancia Mall <div class="rating-box">
+            <div class="star-rating">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+            </div>
+
+            <button class="comment-btn">Comment</button>
+        </div></h2>
+             <p>A premier lifestyle destination in Pasig, Estancia Mall offers a mix of high-end retail brands, gourmet dining options, and entertainment facilities. It features a modern design with open spaces, making it a favorite spot for shopping and leisure.</p>
+         </div>
+            
+         <!-- SM East Ortigas -->
+         <div class="mall-card">
+             <img src="smortigas.jpg" alt="SM East Ortigas">
+             <h2>SM East Ortigas <div class="rating-box">
+            <div class="star-rating">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+            </div>
+
+            <button class="comment-btn">Comment</button>
+        </div></h2>
+             <p>Conveniently located along Ortigas Avenue, SM East Ortigas is a one-stop shop for everyday needs. It houses a wide range of stores, from fashion and accessories to electronics and home goods, plus a supermarket and food court for quick and easy meals.</p>
+         </div>
+         <!-- Robinsons Galleria -->
+         <div class="mall-card">
+             <img src="robinsonG.jpg" alt="Robinsons Galleria">
+             <h2>Robinsons Galleria <div class="rating-box">
+            <div class="star-rating">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+            </div>
+
+            <button class="comment-btn">Comment</button>
+        </div></h2>
+             <p>One of the most iconic malls in the area, Robinsons Galleria boasts over 400 stores, including international brands, local boutiques, and a variety of dining choices. It also has a cinema complex and event spaces for gatherings and shows.</p>
+         </div>
+     </section>
+    
+ </body>
+ </html>

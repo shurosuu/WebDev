@@ -1,0 +1,262 @@
+/* ===== RESET SAFE ===== */
+.gallery-page * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1622;
+    color: white;
+}
+
+/* ===== MAIN PAGE (UPDATED WITH BACKGROUND) ===== */
+.gallery-page {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    /* BACKGROUND IMAGE + DARK OVERLAY */
+    background: 
+        url("gallery images/pasigriver.jpeg") center/cover no-repeat;
+
+    padding-top: 80px; /* space for navbar/header */
+}
+
+.gallery-title {
+    margin-bottom: 40px;
+    font-size: 48px;
+}
+
+/* ===== CARDS ===== */
+.gallery-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* CARD */
+.gallery-card {
+    width: 250px;
+    height: 300px;
+
+    background: rgba(28, 42, 56, 0.5); /* transparent */
+    backdrop-filter: blur(6px);        /* glass blur */
+
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2); /* subtle border */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+.gallery-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ICON IMAGE */
+.gallery-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* TEXT */
+.gallery-card span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* HOVER */
+.gallery-card:hover {
+    transform: translateY(-10px);
+    background: #2b3d52;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== HEADER ===== */
+.pig-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(11,22,34,0.6);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+/* CENTER TITLE */
+.pig-header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.pig-back {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ===== GALLERY SECTION ===== */
+.pasig-immersive-gallery {
+    margin-top: 70px;
+}
+
+/* ===== IMMERSIVE CARDS ===== */
+.pig-card {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.pig-card.pig-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* IMAGE */
+.pig-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.pig-card:hover img {
+    transform: scale(1.08);
+}
+
+/* OVERLAY */
+.pig-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(11,22,34,0.9),
+        rgba(11,22,34,0.4),
+        transparent
+    );
+}
+
+/* CONTENT */
+.pig-content {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+
+    max-width: 500px;
+
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.pig-card.pig-show .pig-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pig-content h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.pig-content p {
+    font-size: 18px;
+    opacity: 0.85;
+    margin-top: 10px;
+}
+
+/* ALTERNATE TEXT POSITION */
+.pig-card:nth-child(even) .pig-content {
+    left: auto;
+    right: 60px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+
+    .about-text h1 {
+        font-size: 40px;
+        padding-left: 20px;
+    }
+
+    .about-content {
+        padding: 40px 20px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .gallery-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .pig-content {
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+    }
+
+    .pig-content h2 {
+        font-size: 28px;
+    }
+
+    .pig-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pig-card {
+        height: auto;
+    }
+
+    .pig-card img {
+        height: 300px;
+    }
+
+    .gallery-page {
+        background-size: cover;
+        background-position: top; /* instead of center */
+}
+}
